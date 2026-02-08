@@ -1,73 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>I Love You ❤️</title>
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: pink;
-      overflow: hidden;
-      text-align: center;
-    }
-
-    h1 {
-      margin-top: 100px;
-      color: white;
-      font-size: 2.8rem;
-      position: relative;
-      z-index: 2;
-    }
-
-    .love-btn {
-      margin-top: 40px;
-      background: red;
-      color: white;
-      border: none;
-      padding: 18px 35px;
-      font-size: 1.5rem;
-      border-radius: 40px;
-      cursor: pointer;
-      transition: 0.3s;
-      position: relative;
-      z-index: 2;
-    }
-
-    .love-btn:hover {
-      background: darkred;
-      transform: scale(1.08);
-    }
-
-    /* Floating Hearts */
-    .heart {
-      position: fixed;
-      bottom: -20px;
-      opacity: 0.7;
-      pointer-events: none;
-      animation-name: floatUp;
-      animation-timing-function: linear;
-    }
-
-    @keyframes floatUp {
-      from { transform: translateY(0); }
-      to { transform: translateY(-120vh); }
-    }
-  </style>
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <h1>❤️ I Love You ❤️</h1>
+  <h1>💖 Welcome My Love 💖</h1>
 
-  <!-- Button goes to second page -->
-  <button class="love-btn" onclick="window.location.href='playlist.html'">
+  <!-- Button goes to playlist page -->
+  <button class="love-btn" onclick="goNextPage()">
+    ❤️ I Love You ❤️
   </button>
 
   <script>
+    function goNextPage() {
+      window.location.href = "playlist.html";
+    }
+
+    // Floating Hearts Wallpaper
     function createHeart() {
       const heart = document.createElement("div");
       heart.classList.add("heart");
