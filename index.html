@@ -3,45 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>I Love You ❤️</title>
-
-  <!-- Link CSS -->
+  <title>Hey Love❤️</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <h1> hey love! </h1>
+  <!-- Floating Hearts Background -->
+  <div class="hearts"></div>
 
-  <!-- Button goes to playlist page -->
-  <button class="love-btn" onclick="goNextPage()">
-     I Love You😚
-  </button>
+  <!-- Center Content -->
+  <div class="center-box">
+    <h1>Hey Love❤️</h1>
 
-  <script>
-    function goNextPage() {
-      window.location.href = "playlist.html";
-    }
-
-    // Floating Hearts Wallpaper
-    function createHeart() {
-      const heart = document.createElement("div");
-      heart.classList.add("heart");
-      heart.innerHTML = "❤️";
-
-      heart.style.left = Math.random() * 100 + "vw";
-      heart.style.fontSize = Math.random() * 15 + 10 + "px";
-      heart.style.animationDuration = Math.random() * 3 + 3 + "s";
-
-      document.body.appendChild(heart);
-
-      setTimeout(() => {
-        heart.remove();
-      }, 6000);
-    }
-
-    setInterval(createHeart, 100);
-  </script>
+    <!-- Button that goes to playlist page -->
+    <button class="love-btn" onclick="window.location.href='./playlist.html'">
+       I Love You😚
+    </button>
+  </div>
 
 </body>
 </html>
