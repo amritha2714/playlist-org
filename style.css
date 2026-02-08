@@ -1,62 +1,55 @@
-* {
-    box-sizing: border-box;
-}
-
 body {
-    margin: 0;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #ffd6e0, #ff9aa2);
-    overflow-x: hidden;
-    text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: pink;
+  overflow: hidden;
+  text-align: center;
 }
 
+h1 {
+  margin-top: 40px;
+  color: white;
+  font-size: 2.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+p {
+  color: white;
+  font-size: 1.2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Spotify Box */
+.spotify-box {
+  margin: 30px auto;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  z-index: 2;
+}
+
+iframe {
+  border-radius: 15px;
+}
+
+/* Heart Wallpaper Animation */
 .heart {
-    position: absolute;
-    font-size: 20px;
-    animation: floatPop 12s linear infinite;
-    opacity: 0.6;
+  position: fixed;
+  bottom: -20px;
+  opacity: 0.7;
+  pointer-events: none;
+  animation-name: floatUp;
+  animation-timing-function: linear;
 }
 
-.heart1 { left: 10%; animation-delay: 0s; }
-.heart2 { left: 30%; animation-delay: 1s; }
-.heart3 { left: 50%; animation-delay: 2s; }
-.heart4 { left: 70%; animation-delay: 3s; }
-.heart5 { left: 90%; animation-delay: 4s; }
-
-@keyframes floatPop {
-    0% { bottom: -10%; }
-    100% { bottom: 110%; }
-}
-
-.welcome {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-}
-
-.welcome h1 {
-    font-size: 36px;
-    color: #c2185b;
-}
-
-.welcome button {
-    padding: 15px 40px;
-    font-size: 18px;
-    border: none;
-    border-radius: 30px;
-    background: #ff4d6d;
-    color: white;
-}
-
-.playlist {
-    padding: 20px;
-    max-width: 500px;
-    margin: auto;
-}
-
-.hidden {
-    display: none;
+@keyframes floatUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-120vh);
+  }
 }
