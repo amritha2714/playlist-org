@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="heart heart1">💗</div>
+<div class="heart heart2">💕</div>
+<div class="heart heart3">💖</div>
+<div class="heart heart4">💓</div>
+<div class="heart heart5">💞</div>
+
+<section class="welcome" id="welcome">
+    <h1>Hey Love ❤️</h1>
+    <p>Tap the button, this is just for you</p>
+    <button onclick="openPlaylist()">I Love You</button>
+</section>
+
+<section class="playlist hidden" id="playlist">
+    <h2>My Spotify Playlist for You 💕</h2>
+    <p>Every song reminds me of you.</p>
+
+    <iframe
+        style="border-radius:12px"
+        src="https://open.spotify.com/embed/playlist/YOUR_PLAYLIST_ID"
+        width="100%"
+        height="380"
+        frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+    </iframe>
+
+    <footer>Made with ❤️ just for you</footer>
+</section>
+
+<script>
+function openPlaylist() {
+    document.getElementById("welcome").style.display = "none";
+    document.getElementById("playlist").classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
