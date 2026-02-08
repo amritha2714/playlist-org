@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffd6e0, #ff9aa2);
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.heart {
+    position: absolute;
+    font-size: 20px;
+    animation: floatUp 12s linear infinite;
+    opacity: 0.6;
+}
+
+.heart1 { left: 10%; animation-delay: 0s; }
+.heart2 { left: 30%; animation-delay: 2s; }
+.heart3 { left: 50%; animation-delay: 4s; }
+.heart4 { left: 70%; animation-delay: 6s; }
+.heart5 { left: 90%; animation-delay: 8s; }
+
+@keyframes floatUp {
+    0% { bottom: -10%; }
+    100% { bottom: 110%; }
+}
+
+.welcome {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.welcome h1 {
+    font-size: 36px;
+    color: #c2185b;
+}
+
+.welcome button {
+    padding: 15px 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background: #ff4d6d;
+    color: white;
+}
+
+.playlist {
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.hidden {
+    display: none;
+}
